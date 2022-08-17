@@ -71,6 +71,9 @@ class LinkedList {
 
     getAt(index){
         //TODO implement check so that index is not greater than the last item in the list
+        if (this.head == null){
+            return null;
+        }
 
         let current = this.head;
         for(let i = 0; i < index; i++){
