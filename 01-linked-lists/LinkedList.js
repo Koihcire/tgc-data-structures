@@ -2,6 +2,7 @@ class LinkedList {
     constructor(){
         //if the head is null it means the linked list is empty
         this.head = null;
+        this.tail = null;
     }
 
     push(newNode){
@@ -19,6 +20,9 @@ class LinkedList {
             //when the current finishes, current will refer to the last node
             //then, set the next node to be the new node
             current.setNext(newNode)
+
+            //TODO how to do away with the while loop? use a tail
+            
         }
     }
 
