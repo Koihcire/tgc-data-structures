@@ -15,6 +15,7 @@ class BinaryTree {
         return this.recursiveFind(this.rootNode, targetValue)
     }
 
+    //pre order traversal example
     recursiveFind(rootNode, targetValue){
         if (!rootNode) {
             return false; //not found
@@ -50,6 +51,21 @@ class BinaryTree {
         }
 
         return rootNode
+    }
+
+    sum(){
+        return this.recursiveSum(this.rootNode);
+    }
+
+    recursiveSum(rootNode){
+        if(rootNode == null){
+            return 0
+        }
+
+        const leftSum = this.recursiveSum(rootNode.left);
+        const rightSum = this.recursiveSum(rootNode.right);
+
+        return rootNode.value + leftSum + rightSum
     }
 }
 

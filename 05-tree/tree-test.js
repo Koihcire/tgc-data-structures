@@ -27,3 +27,4 @@ tree.add(71)
 
 console.log('searching for 7... ', tree.find(7))
 console.log('searching for 722... ', tree.find(722))
+console.log("sum of tree: ", tree.sum())
